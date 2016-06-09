@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		div {
+			border-style: solid;
+			border-color: gray;
+			border-width: 15px;
+			border-radius: 25px;
+		}
+		p.heads {
+			position: relative;
+			left: 50px;
+		}
+		.inBorder {
+			position: absolute;
+			transform: translate(10px, -18px);
+			background-color: white;
+			padding: 2px;
+		}
+	</style>
+	<title>InfoSite</title>
+</head>
+
+<body>
+	<h1>Please enter your details...</h1>
+	<form action="http://www.server.com/subdirectory/program.php" method="post" enctype="multipart/form-data">
+	<div id="face">
+		<span class="inBorder">Your Face</span>
+		<p class="heads">Your Image: <input type="file" name="file"></input></p>
+		<p class="heads">Image Preview: <img src="file"></p>
+	</div>
+	<br>
+	<div id="details">
+		<span class="inBorder">General Details</span>
+		<p class="heads"><label for="name">Name: </label><input type="text" id="name" name="name" placeholder="Please enter your name"> </p>
+		<p class="heads">Gender: <input type="radio" id="gender" name="gender" value="male" required="gender">Male <input type="radio" name="gender" value="female">Female </p>
+		<p class="heads">Age: <input type="number" id="age" name="age" min="1" max="100"></p>
+		<p class="heads">Date of Birth: <input type="date" id="birthday" name="birthday"></p>
+		<p class="heads">Favorite Color: <input type="color" id="favcolor" name="favcolor"></p>
+		<p class="heads">Which Country? <input type="spinner" id="country" name="country" value="America" value="Canada"></p>
+	</div>
+	<br>
+	<div id="indicators">
+		<span class="inBorder">Your Indicators</span>
+		<p class="heads">Height: <span>Short </span><input type="range" id="height" name="height" min="0" max="10"><span> Tall</span></p>
+		<p class="heads">Salary: 20,000-/yr <input type="range" id="salary" name="salary" min="0" max="10"> 100,000+/yr</p>
+	</div>
+	<br>
+	<div id="contact_info">
+		<span class="inBorder">Your Contact Information</span>
+		<p class="heads">Email: <input type="email" id="email" name="email"></p>
+		<p class="heads">Mobile: <input type="phone" id="mobile" name="mobile"></p>
+		<p class="heads">Address: <input type="address" id="address" name="address"></p>
+		<p class="heads">Method to contact you: 
+			Email<input type="checkbox" id="contact" name="contact" value="email" required="contact"> 
+			Mobile<input type="checkbox" id="contact" name="contact" value="mobile"> 
+			Mail<input type="checkbox" id="contact" name="contact" value="mail"></p>
+	</div>
+	<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
